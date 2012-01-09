@@ -1,29 +1,46 @@
 @import 'configuration';
 @import 'css3/css3_effects';
 
+#header_background {
+	width: 100%;
+	height: 140px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background: $header-background;
+	z-index: -1;
+}
+
 #stage {
 	width: $stage-width;
 	height: auto;
-	margin: 0 auto;
+	margin: 20px auto 0px auto;
 	background-color: transparent;
+	overflow: hidden;
 }
 
 .header {
-	width: 100%;
+	width: $stage-width - (2 * $outer-border);
 	height: 100px;
-	
-	margin-bottom: 25px;
+	padding-bottom: 25px;
+	border: 20px solid $border-color;
+	border-bottom: 0px;
+	overflow: hidden;
 	
 	.logo {
 		float: left;
 		margin-right: 50px;
+		margin-top: 5px;
+		
+		img {
+			height: 95px;
+		}
 	}
 	
 	.menu {
 		width: 100px;
 		height: 100%;
 		float: left;
-		margin-left: 10px;
 		background: #2994FF;
 		
 		@include transition((height, background), (0.5s, 0.5s));
@@ -43,6 +60,13 @@
 		}
 	}
 	
+	.line {
+		width: 1px;
+		height: 100%;
+		float: left;
+		background: #1A5FA3;
+	}
+	
 	img {
 		height: 100%;
 	}
@@ -53,13 +77,16 @@
 }
 
 .content {
-	width: 100%;
+	width: $stage-width - (2 * $outer-border);
 	min-height: 450px;
 	height: auto;
+	overflow: hidden;
+	border: 20px solid $border-color;
+	border-top: none;
 }
 
 .footer {
-	width: 100%;
+	width: $stage-width - (2 * $outer-border);
 	height: 35px;
 }
 
