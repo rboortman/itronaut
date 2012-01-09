@@ -1,4 +1,11 @@
 Itronaut::Application.routes.draw do
+  
+  root :to => 'contents#index';
+ 
+  get '/home' => 'contents#index'
+  
+  resources :contents
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
