@@ -1,12 +1,1 @@
-%p#notice= notice
-
-%p
-  %b Name:
-  = @content.name
-%p
-  %b Location:
-  = @content.location
-
-= link_to 'Edit', edit_content_path(@content)
-\|
-= link_to 'Back', contents_path
+=render :template => @content.location

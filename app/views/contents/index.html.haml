@@ -1,20 +1,20 @@
 %h1 Listing contents
 
 %table
-  %tr
-    %th Name
-    %th Location
-    %th
-    %th
-    %th
+	%tr
+		%th Name
+		%th Location
+		%th
+		%th
+		%th
 
-  - @contents.each do |content|
-    %tr
-      %td= content.name
-      %td= content.location
-      %td= link_to 'Show', content
-      %td= link_to 'Edit', edit_content_path(content)
-      %td= link_to 'Destroy', content, :confirm => 'Are you sure?', :method => :delete
+	- @contents.each do |content|
+		%tr
+			%td= content.name
+			%td= content.location
+			%td= link_to 'Show', content
+			%td= link_to 'Edit', edit_content_path(content)
+			%td= link_to 'Destroy', content, :confirm => 'Are you sure?', :method => :delete
 
 %br
 

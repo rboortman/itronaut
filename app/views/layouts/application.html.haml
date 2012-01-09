@@ -8,10 +8,9 @@
 			itronaut - 
 			= controller.controller_name.gsub('_', ' ').split(' ').each{|word| word.capitalize!}.join(' ')
 			
-		%meta{:name => 'keywords', :content => 'car, HY, HY\'s Mooi, mooi, revisie, oud, oude, auto, autos, citroen, opknappen, HZ, HL, H, type, oldtimer, kosten, camper, kamper, kamperen, bedrijfswagen, garage, werkplaats'}
-			
-			
-	%body{ :class => controller.controller_name}
+
+
+	%body{ :class => if @content then @content.name else controller.controller_name end }
 		#stage
 			.header
 				= render 'header' rescue nil
