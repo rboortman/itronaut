@@ -1,5 +1,7 @@
+@import 'configuration';
+
 body {
-  background-color: #fff;
+  background-color: $background-color;
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
@@ -18,10 +20,14 @@ pre {
 a {
   color: #000;
   &:visited {
-    color: #666; }
-  &:hover {
-    color: #fff;
-    background-color: #000; } }
+    color: #666; } }
+
+span#itronaut {
+	font-family: monaco, monospace;
+	font-weight: bold;
+	font-style: italic;
+	color: #009;
+}
 
 div {
   &.field, &.actions {

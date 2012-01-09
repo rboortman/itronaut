@@ -6,7 +6,7 @@
 		= csrf_meta_tags
 		%title
 			itronaut - 
-			= controller.controller_name.gsub('_', ' ').split(' ').each{|word| word.capitalize!}.join(' ')
+			=if @content then @content.name.capitalize! else controller.controller_name.gsub('_', ' ').split(' ').each{|word| word.capitalize!}.join(' ') end
 			
 
 
