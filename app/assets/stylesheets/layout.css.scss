@@ -1,5 +1,5 @@
 @import 'configuration';
-@import 'transition';
+@import 'css3/css3_effects';
 
 #stage {
 	width: $stage-width;
@@ -11,7 +11,8 @@
 .header {
 	width: 100%;
 	height: 100px;
-	float: left;
+	
+	margin-bottom: 25px;
 	
 	.logo {
 		float: left;
@@ -31,10 +32,23 @@
 			height: 120%;
 			background: #1A5FA3;
 		}
+		
+		.text {
+			color: white;
+			font-family: monaco, monospace;
+			font-weight: bold;
+			font-size: 18px;
+			margin-top: 70px;
+			padding-left: 10px;
+		}
 	}
 	
 	img {
 		height: 100%;
+	}
+	
+	a {
+		text-decoration: none;
 	}
 }
 

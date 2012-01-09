@@ -10,7 +10,7 @@
 			
 
 
-	%body{ :class => if @content then @content.name else controller.controller_name end }
+	%body{ :class => if @content then @content.name.downcase! else controller.controller_name end }
 		#stage
 			.header
 				= render 'header' rescue nil

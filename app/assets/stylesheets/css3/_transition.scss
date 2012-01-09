@@ -2,7 +2,6 @@
 // Example: @include transition (all, 2.0s, ease-in-out);
 //          @include transition ((opacity, width), (1.0s, 2.0s), ease-in, (0, 2s));
 //          @include transition ($property:(opacity, width), $delay: (1.5s, 2.5s));
-@import 'function/compact';
 
 @mixin transition ($property: all, $duration: 0.15s, $timing-function: ease-out, $delay: 0) {
 
