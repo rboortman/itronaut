@@ -1,8 +1,10 @@
 Itronaut::Application.routes.draw do
   
+  get '/contact' => 'contents#show', :id => 2;
+  
   root :to => 'contents#show', :id => 1;
  
-  get '/home' => 'contents#show', :id => 2;
+  get '/home' => 'contents#show', :id => 1;
   
   resources :contents
 

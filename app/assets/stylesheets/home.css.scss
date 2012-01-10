@@ -15,49 +15,7 @@
 
 body.home {
 	
-	.front_teaser {
-		width: 100%;
-		height: auto;
-		float: left;
-		position: relative;
-		overflow: hidden;
-		
-		.background {
-			background: black url('/assets/home/background.png') repeat 5% 5%;
-			position: absolute;
-			top: 0; left: 0; right: 0; bottom: 0;
-			z-index: -100;
-			overflow: hidden;
-
-			@include animation-name(move_stars);
-			@include animation-duration (200s);
-			@include animation-timing-function (linear);
-			@include animation-iteration-count (infinite);
-		}
-		
-		.midground {
-			background: url('/assets/home/midground.png') repeat 20% 20%;
-			position: absolute;
-			top: 0; left: 0; right: 0; bottom: 0;
-			z-index: -75;
-			
-			@include animation-name(move_stars);
-			@include animation-duration (150s);
-			@include animation-timing-function (linear);
-			@include animation-iteration-count (infinite);
-		}
-		
-		.foreground {
-			background: url('/assets/home/foreground.png') repeat 35% 35%;
-			position: absolute;
-			top: 0; left: 0; right: 0; bottom: 0;
-			z-index: -50;
-			
-			@include animation-name(move_stars);
-			@include animation-duration (100s);
-			@include animation-timing-function (linear);
-			@include animation-iteration-count (infinite);
-		}
+	.stars {
 		
 		.prologue {
 			height: 200px;
@@ -88,7 +46,7 @@ body.home {
 			height: 100%;
 			float: left;
 			
-			@include transition(background, 0.5s);
+			@include transition(background, 0.5s, ease-out);
 		}
 		
 		.text {
@@ -140,14 +98,14 @@ body.home {
 				color: white;
 				
 				@include border-radius(7px);
-				@include linear-gradient(bottom, #0D3F78, #1A82F7);
+				@include linear-gradient(bottom, #454545, #B5B5B5);
 				
 				.text {
 					float: left;
 				}
 				
 				&:hover {
-					@include linear-gradient(bottom, #472254, #A163B8);
+					@include linear-gradient(bottom, #0D3F78, #1A82F7);
 				}
 				
 				&:active {

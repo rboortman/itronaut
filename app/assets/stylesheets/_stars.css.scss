@@ -1,0 +1,60 @@
+@import 'configuration';
+@import 'css3/css3_effects';
+
+@mixin move_stars {
+  0% {
+		background-position: 1300% 600%;
+  }
+  100% {
+    background-position: 5% 5%;
+  }
+}
+@-webkit-keyframes move_stars { @include move_stars; }
+   @-moz-keyframes move_stars { @include move_stars; }
+        @keyframes move_stars { @include move_stars; }
+
+body {
+	.stars {
+		width: 100%;
+		height: auto;
+		position: relative;
+		overflow: hidden;
+		
+		.background {
+			background: black url('/assets/home/background.png') repeat 5% 5%;
+			position: absolute;
+			top: 0; left: 0; right: 0; bottom: 0;
+			z-index: -100;
+			overflow: hidden;
+			
+			@include animation-name(move_stars);
+			@include animation-duration (200s);
+			@include animation-timing-function (linear);
+			@include animation-iteration-count (infinite);
+		}
+		
+		.midground {
+			background: url('/assets/home/midground.png') repeat 20% 20%;
+			position: absolute;
+			top: 0; left: 0; right: 0; bottom: 0;
+			z-index: -75;
+			
+			@include animation-name(move_stars);
+			@include animation-duration (150s);
+			@include animation-timing-function (linear);
+			@include animation-iteration-count (infinite);
+		}
+		
+		.foreground {
+			background: url('/assets/home/foreground.png') repeat 35% 35%;
+			position: absolute;
+			top: 0; left: 0; right: 0; bottom: 0;
+			z-index: -50;
+			
+			@include animation-name(move_stars);
+			@include animation-duration (100s);
+			@include animation-timing-function (linear);
+			@include animation-iteration-count (infinite);
+		}
+	}
+}

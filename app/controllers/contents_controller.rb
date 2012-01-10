@@ -1,4 +1,7 @@
 class ContentsController < ApplicationController
+  
+=begin
+
   # GET /contents
   # GET /contents.json
   def index
@@ -10,19 +13,23 @@ class ContentsController < ApplicationController
     end
   end
 
+=end
+
   # GET /contents/1
   # GET /contents/1.json
   def show
     @content = Content.find(params[:id])
+    
+    @home = Content.find_by_name('home')
+    @contact = Content.find_by_name('contact')
 
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @content }
     end
-    
-    @home = Content.find_by_name('home')
-    @contact = Content.find_by_name('contact')
   end
+
+=begin
 
   # GET /contents/new
   # GET /contents/new.json
@@ -83,4 +90,7 @@ class ContentsController < ApplicationController
       format.json { head :ok }
     end
   end
+  
+=end
+  
 end
