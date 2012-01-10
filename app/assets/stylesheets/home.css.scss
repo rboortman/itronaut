@@ -132,25 +132,28 @@ body.home {
 		.story {
 			width: 40%;
 			height: auto;
-		
+			
 			.button {
 				width: 150px;
 				height: 25px;
 				padding: 6px 0px 0px 10px;
 				color: white;
-			
+				
 				@include border-radius(7px);
 				@include linear-gradient(bottom, #0D3F78, #1A82F7);
-				@include transition(all, 0.5s);
-			
+				
 				.text {
 					float: left;
 				}
-			
+				
 				&:hover {
-					@include linear-gradient(bottom, #000, #ccc);
+					@include linear-gradient(bottom, #472254, #A163B8);
 				}
-			
+				
+				&:active {
+					@include box-shadow(inset 0 0 10px #000);
+				}
+				
 				.arrow {
 					width: 0px;
 					height: 0px;
@@ -158,26 +161,26 @@ body.home {
 					border-bottom: 5px solid transparent;
 					border-left: 5px solid black;
 					margin: 4px 10px 0px 0px;
-				
+					
 					position: relative;
 				}
-			
+				
 				.top {
 					border-left: 5px solid white;
-				
+					
 					left: 130px;
 				}
-			
+				
 				.center {
 					left: 130px;
 					top: -12px;
 				}
-			
+				
 				.bottom {
 					border-top: 4px solid transparent;
 					border-bottom: 4px solid transparent;
 					border-left: 4px solid #C2DFFF;
-				
+					
 					left: 132px;
 					top: 2px;
 				}

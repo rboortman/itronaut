@@ -19,6 +19,9 @@ class ContentsController < ApplicationController
       format.html # show.html.erb
       format.json { render json: @content }
     end
+    
+    @home = Content.find_by_name('home')
+    @contact = Content.find_by_name('contact')
   end
 
   # GET /contents/new

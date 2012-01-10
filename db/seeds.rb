@@ -5,3 +5,13 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Content.delete_all
+
+Content.create(
+  :name => 'home',
+  :location => 'home/index')
+
+Content.create(
+  :name => 'contact',
+  :location => 'contact/index')
