@@ -18,36 +18,54 @@
 	background-color: transparent;
 	overflow: hidden;
 	z-index: -150;
+	
+	$border-radius: 40px;
+	
+	.first {
+		@include border-top-left-radius($border-radius);
+	}
+
+	.last {
+		@include border-bottom-right-radius($border-radius);
+	}
 }
 
 .header {
+	$image_width: 280px;
+	$margin_logo: 50px;
+	
 	width: $stage-width - (2 * $outer-border);
 	height: 100px;
-	padding-bottom: 25px;
+//	padding-bottom: 25px;
 	border: 20px solid $border-color;
-	border-bottom: 0px;
+	border-bottom: 5px solid $border-color;
 	overflow: hidden;
 	
 	.logo {
 		float: left;
-		margin-right: 50px;
+		margin-right: $margin_logo;
 		margin-top: 5px;
 		
 		img {
-			height: 95px;
+			width: $image_width;
 		}
 	}
 	
+	$number_of_menus: 5;
+	$line_width: 1px;
+	$menu_width: (($stage-width - (2 * $outer-border)) - ($image_width + $margin_logo) - ($number_of_menus * $line_width))
+	 						 / $number_of_menus;
+	
+	
 	.menu {
-		width: 100px;
+		width: $menu_width;
 		height: 100%;
 		float: left;
 		background: #2994FF;
 		
-		@include transition((height, background), (0.5s, 0.5s));
+		@include transition(background, 0.5s);
 		
 		&:hover {
-			height: 120%;
 			background: #1A5FA3;
 		}
 		
@@ -62,14 +80,10 @@
 	}
 	
 	.line {
-		width: 1px;
+		width: $line_width;
 		height: 100%;
 		float: left;
 		background: #1A5FA3;
-	}
-	
-	img {
-		height: 100%;
 	}
 	
 	a {
@@ -80,6 +94,7 @@
 .content {
 	width: $stage-width - (2 * $outer-border);
 	min-height: 450px;
+	margin-bottom: 20px;
 	height: auto;
 	overflow: hidden;
 	border: 20px solid $border-color;
@@ -88,7 +103,7 @@
 
 .footer {
 	width: $stage-width - (2 * $outer-border);
-	height: 35px;
+	height: 50px;
 }
 
 

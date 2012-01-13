@@ -3,7 +3,7 @@
 		%img{:src => '/assets/overall/itronaut.png'}
 
 %a{:href => content_path(@home)}
-	.menu
+	.menu.first
 		.text
 			home
 
@@ -16,7 +16,21 @@
 
 .line
 
-%a{:href => content_path(@contact)}
+%a{:href => content_path(@home)}
 	.menu
+		.text
+			bla
+
+.line
+
+%a{:href => content_path(@home)}
+	.menu
+		.text
+			bla
+
+.line
+
+%a{:href => content_path(@contact)}
+	.menu.last
 		.text
 			contact
