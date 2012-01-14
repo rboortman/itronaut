@@ -5,18 +5,55 @@ body.home {
 	
 	.stars {
 		
+		height: 320px;
+		
 		.prologue {
 			height: 200px;
 			width: 400px;
-			margin: 50px 20px;
+			margin: 50px 20px 70px;
 			padding: 6px 14px;
-			
-			@include border-radius(5px);
-			
 			background-color: white;
 			opacity: 0.85;
 			filter:alpha(opacity = 85);
 			overflow: hidden;
+			
+			@include border-radius(15px);
+		}
+		
+		.left {
+			float: left;
+		}
+		
+		.right {
+			float: right;
+		}
+		
+		.arrow {
+			content: "";
+			display: block; /* reduce the damage in FF3.0 */
+			position: absolute;
+			bottom: 18px;
+			width: 0;
+			border-width: 40px 30px 0;
+			border-style: solid;
+			border-color: white transparent;
+			opacity: 0.85;
+			filter:alpha(opacity = 85);
+		}
+		
+		.balloon1 {
+			left: 50px;
+		}
+		
+		.balloon2_1 {
+			left: 350px;
+		}
+		.balloon2_3 {
+			right: 350px;
+		}
+		
+		.balloon3 {
+			right: 50px;
 		}
 	}
 	
