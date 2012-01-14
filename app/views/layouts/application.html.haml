@@ -7,7 +7,7 @@
 		%title
 			itronaut - 
 			=if @content then @content.name.capitalize! else controller.controller_name.gsub('_', ' ').split(' ').each{|word| word.capitalize!}.join(' ') end
-			
+		
 
 
 	%body{ :class => if @content then @content.name.downcase! else controller.controller_name end }

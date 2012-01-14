@@ -19,6 +19,7 @@ $(document).ready ->
 	arrow = $('.arrow')
 	duration = 0
 	appear = 'normal'
+	slow = 600
 	delay_1 = 100
 	delay_2 = 800
 	
@@ -42,7 +43,6 @@ $(document).ready ->
 			appear_arrow('balloon2_3', delay_1)
 	
 	to_block3 = ->
-		
 		if prologue.hasClass('left')
 			arrow.hide(0)
 			prologue.hide(appear)
@@ -60,7 +60,8 @@ $(document).ready ->
 			arrow.removeClass('balloon2_3')
 			arrow.removeClass('balloon3')
 			arrow.addClass(to_class)
-			arrow.delay(show_delay).show('slide', 'slow')
+			arrow.delay(show_delay).show(slow, -> arrow.stop())
+			
 	
 	
 	
