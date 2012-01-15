@@ -12,7 +12,7 @@
 }
 
 #stage {
-	width: $stage-width;
+	width: $stage-outer-width;
 	height: auto;
 	margin: 20px auto 0px auto;
 	background-color: transparent;
@@ -35,7 +35,7 @@
 	$image_width: 280px;
 	$margin_logo: 50px;
 	
-	width: $stage-width - (2 * $outer-border);
+	width: $stage-width;
 	height: 100px;
 	border: 20px solid $border-color;
 	border-bottom: 10px solid $border-color;
@@ -51,9 +51,9 @@
 		}
 	}
 	
-	$number_of_menus: 5;
+	$number_of_menus: 4;
 	$line_width: 1px;
-	$menu_width: (($stage-width - (2 * $outer-border)) - ($image_width + $margin_logo) - ($number_of_menus * $line_width))
+	$menu_width: ($stage-width - ($image_width + $margin_logo) - ($number_of_menus * $line_width))
 	 						 / $number_of_menus;
 	
 	
@@ -92,7 +92,7 @@
 }
 
 .content {
-	width: $stage-width - (2 * $outer-border);
+	width: $stage-width;
 	min-height: 450px;
 	margin-bottom: 20px;
 	height: auto;

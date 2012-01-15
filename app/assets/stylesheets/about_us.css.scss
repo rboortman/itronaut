@@ -1,0 +1,65 @@
+@import 'configuration';
+@import 'css3/css3_effects';
+
+body.about_us {
+	
+	.content {
+		$arrow-container-width: 95px;
+		
+		background: $border-color;
+		
+		.block {
+			$padding: 14px;
+			
+			width: ($stage-width - (2 * $arrow-container-width + 6 * $padding)) / 3;
+			height: auto;
+			min-height: 350px;
+			margin: 10px 0px 50px 0px;
+			padding: 6px $padding;
+			float: left;
+			
+			@include border-radius(5px);
+			
+			background: rgba(81, 145, 219, 0.3);
+			opacity: 0.85;
+			filter:alpha(opacity = 85);
+			overflow: hidden;
+			
+			.canvas {
+				margin: 13px 10px 5px;
+				float: left;
+			}
+		}
+		
+		.arrow_container {
+			$arrow-padding: 10px;
+			$arrow-width: 28px;
+			$arrow-height: 85px;
+			$arrow-color: rgba(50, 50, 50, 0.2);
+			
+			width: $arrow-container-width - (2 * $arrow-padding);
+			height: 100px;
+			margin: 150px 0px;
+			padding: 0px $arrow-padding;
+			float: left;
+			
+			.square {
+				width: $arrow-width;
+				height: $arrow-height;
+				background: $arrow-color;
+				margin: (((4 * $arrow-width) - $arrow-height) / 2) 0px;
+				float: left;
+			}
+			
+			.point {
+				width: 0px;
+				height: 0px;
+				border-top: ($arrow-width * 2) solid transparent;
+				border-bottom: ($arrow-width * 2) solid transparent;
+				border-left: ($arrow-height / 2) solid $arrow-color;
+				float: left;
+			}
+		}
+		
+	}
+}

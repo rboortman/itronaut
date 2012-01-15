@@ -1,5 +1,7 @@
 Itronaut::Application.routes.draw do
   
+  get '/about_us' => 'contents#show', :id => 3;
+  
   get '/contact' => 'contents#show', :id => 2;
   
   root :to => 'contents#show', :id => 1;

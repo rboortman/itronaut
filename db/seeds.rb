@@ -15,3 +15,7 @@ Content.create(
 Content.create(
   :name => 'contact',
   :location => 'contact/index')
+
+Content.create(
+  :name => 'about_us',
+  :location => 'about_us/index')

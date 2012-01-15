@@ -1,5 +1,6 @@
 $outer-border: 20px;
-$stage-width: 900px + (2 * $outer-border);
+$stage-width: 900px;
+$stage-outer-width: $stage-width + (2 * $outer-border);
 $background-color: #B0CCEB;
 $border-color: #E3F0FF;
 $header-background: #638BB8;

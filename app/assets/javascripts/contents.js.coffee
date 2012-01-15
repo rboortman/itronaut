@@ -19,4 +19,4 @@ $(document).ready ->
 	header_annimation = (menu_item) ->
 		stage.slideToggle(duration, 'easeOutCubic', -> window.location.href = '/home').hide(0) if @.id is 'home'
 		stage.slideToggle(duration, 'easeOutCubic', -> window.location.href = '/contact').hide(0) if @.id is 'contact'
-	
+		stage.slideToggle(duration, 'easeOutCubic', -> window.location.href = '/about_us').hide(0) if @.id is 'about_us'

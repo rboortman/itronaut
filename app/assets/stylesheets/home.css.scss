@@ -57,7 +57,7 @@ body.home {
 		
 		
 		.offer {
-			width: ($stage-width - (2 * $outer-border)) / 3;
+			width: $stage-width / 3;
 			height: 100%;
 			float: left;
 			
@@ -105,6 +105,12 @@ body.home {
 		.story {
 			width: 40%;
 			height: auto;
+			
+			.button {
+				&:hover {
+//					color: rgba(81, 145, 219, 1);
+				}
+			}
 		}
 	}
 }
