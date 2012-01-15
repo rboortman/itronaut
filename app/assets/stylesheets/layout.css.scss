@@ -37,9 +37,8 @@
 	
 	width: $stage-width - (2 * $outer-border);
 	height: 100px;
-//	padding-bottom: 25px;
 	border: 20px solid $border-color;
-	border-bottom: 5px solid $border-color;
+	border-bottom: 10px solid $border-color;
 	overflow: hidden;
 	
 	.logo {
