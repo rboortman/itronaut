@@ -1,67 +1,114 @@
 $(document).ready ->
 	
+	# Move
+	# $('.block1').hover(
+	# 	-> to_block1()
+	# 	->
+	# )
+	# 
+	# $('.block2').hover(
+	# 	-> to_block2()
+	# 	->
+	# )
+	# 
+	# $('.block3').hover(
+	# 	-> to_block3()
+	# 	->
+	# )
+	
+	# Appear
 	$('.block1').hover(
-		-> to_block1()
-		->
+		-> block1_in()
+		-> block1_out()
 	)
 	
 	$('.block2').hover(
-		-> to_block2()
-		->
+		-> block2_in()
+		-> block2_out()
 	)
 	
 	$('.block3').hover(
-		-> to_block3()
-		->
+		-> block3_in()
+		-> block3_out()
 	)
 	
+	
+	# Move code
 	prologue = $('.prologue')
 	arrow = $('.arrow')
-	duration = 0
-	appear = 'normal'
-	slow = 600
-	delay_1 = 100
-	delay_2 = 800
+	
+	parent_width = prologue.parent().parent().width()
+	prologue_width = prologue.outerWidth()
+	arrow_width = arrow.outerWidth()
+	prologue_padding = 20
+	arrow_padding_side = 60
+	arrow_padding_middle = prologue.width() - arrow_padding_side
+	duration = 1000
+	style = 'easeInOutExpo'
+	# style = 'easeInOutCubic'
 	
 	to_block1 = ->
-		if prologue.hasClass('right')
-			arrow.hide(0)
-			prologue.hide(appear)
-			prologue.switchClass( 'right', 'left', 0 )
-			prologue.show(appear)
-			appear_arrow('balloon1', delay_2)
-		else if arrow.hasClass('balloon2_1')
-			arrow.hide(0)
-			appear_arrow('balloon1', delay_1)
+		prologue.delay(duration).animate { left: prologue_padding + 'px' }, { queue: false, duration: duration, easing: style }
+		arrow.animate { left: arrow_padding_side + 'px' }, { queue: false, duration: duration, easing: style }
+		new_id('block1')
+		display_text('balloon1')
 	
 	to_block2 = ->
-		if prologue.hasClass('left') && arrow.hasClass('balloon1')
-			arrow.hide(0)
-			appear_arrow('balloon2_1', delay_1)
-		else if arrow.hasClass('balloon3')
-			arrow.hide(0)
-			appear_arrow('balloon2_3', delay_1)
+		if prologue.attr('id') is 'block1'
+			prologue.animate { left: prologue_padding + 'px' }, { queue: false, duration: duration, easing: style }
+			arrow.animate { left: arrow_padding_middle + 'px' }, { queue: false, duration: duration, easing: style }
+		else if prologue.attr('id') is 'block3'
+			prologue.animate { left: parent_width - (prologue_width + prologue_padding) + 'px' }, { queue: false, duration: duration, easing: style }
+			arrow.animate { left: parent_width - (arrow_width + arrow_padding_middle) + 'px' }, { queue: false, duration: duration, easing: style }
+		new_id('block2')
+		display_text('balloon2')
 	
 	to_block3 = ->
-		if prologue.hasClass('left')
-			arrow.hide(0)
-			prologue.hide(appear)
-			prologue.switchClass( 'left', 'right', 0 )
-			prologue.show('fast')
-			appear_arrow('balloon3', delay_2)
-		else if arrow.hasClass('balloon2_3')
-			arrow.hide(0)
-			appear_arrow('balloon3', delay_1)
+		prologue.animate { left: parent_width - (prologue_width + prologue_padding) + 'px' }, { queue: false, duration: duration, easing: style }
+		arrow.animate { left: parent_width - (arrow_width + arrow_padding_side) + 'px' }, { queue: false, duration: duration, easing: style }
+		new_id('block3')
+		display_text('balloon3')
 	
-	appear_arrow = (to_class, show_delay) ->
-		if not arrow.hasClass(to_class)
-			arrow.removeClass('balloon1')
-			arrow.removeClass('balloon2_1')
-			arrow.removeClass('balloon2_3')
-			arrow.removeClass('balloon3')
-			arrow.addClass(to_class)
-			arrow.delay(show_delay).show(slow, -> arrow.stop())
-			
+	new_id = (new_id) ->
+		prologue.attr('id', new_id)
+	
+	display_text = (balloon) ->
+		$('#' + balloon).siblings().hide()
+		$('#' + balloon).delay(100000).show()
+	
+	
+	# Appear code
+	balloon1 = $('#balloon1')
+	balloon2 = $('#balloon2')
+	balloon3 = $('#balloon3')
+	
+	
+	block1_in = ->
+		balloon1.animate { opacity: 0.85 }, { queue: false, duration: duration, easing: style }
+	
+	block1_out = ->
+		balloon1.animate { opacity: 0 }, { queue: false, duration: duration, easing: style }
+	
+	block2_in = ->
+		balloon2.animate { opacity: 0.85 }, { queue: false, duration: duration, easing: style }
+	
+	block2_out = ->
+		balloon2.animate { opacity: 0 }, { queue: false, duration: duration, easing: style }
+	
+	block3_in = ->
+		balloon3.animate { opacity: 0.85 }, { queue: false, duration: duration, easing: style }
+	
+	block3_out = ->
+		balloon3.animate { opacity: 0 }, { queue: false, duration: duration, easing: style }
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
