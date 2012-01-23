@@ -81,6 +81,7 @@ $(document).ready ->
 	balloon1 = $('#balloon1')
 	balloon2 = $('#balloon2')
 	balloon3 = $('#balloon3')
+	duration = 500
 	
 	
 	block1_in = ->

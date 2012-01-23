@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(:version => 20120109121600) do
   create_table "contents", :force => true do |t|
     t.string   "name"
     t.string   "location"
+    t.integer  "page"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

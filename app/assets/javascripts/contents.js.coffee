@@ -5,13 +5,14 @@
 window.onload = ->
 	load_annimation()
 	$('.menu').click header_annimation
-header_annimation = -> console.log 'Oh oh..'
-load_annimation = -> console.log 'Oh oh..'
+	$('.button').click button_click
+header_annimation = -> console.log 'Oh oh, \'header_annimation\' went wrong'
+load_annimation = -> console.log 'Oh oh, \'load_annimation went\' wrong'
 
 $(document).ready ->
 	
 	stage = $('#stage')
-	duration = 500
+	duration = 250
 	
 	load_annimation = ->
 		stage.slideToggle duration, 'easeInCubic'
@@ -20,3 +21,4 @@ $(document).ready ->
 		stage.slideToggle(duration, 'easeOutCubic', -> window.location.href = '/home').hide(0) if @.id is 'home'
 		stage.slideToggle(duration, 'easeOutCubic', -> window.location.href = '/contact').hide(0) if @.id is 'contact'
 		stage.slideToggle(duration, 'easeOutCubic', -> window.location.href = '/about_us').hide(0) if @.id is 'about_us'
+		stage.slideToggle(duration, 'easeOutCubic', -> window.location.href = '/show_down').hide(0) if @.id is 'show_down'

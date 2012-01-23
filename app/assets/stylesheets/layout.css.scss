@@ -3,18 +3,29 @@
 
 #header_background {
 	width: 100%;
-	height: 140px;
+	height: 130px;
 	position: absolute;
 	top: 0px;
 	left: 0px;
 	background: $header-background;
-	z-index: -1;
+	z-index: -100;
+	
+	@include box-shadow(0px 10px 30px #074F8C);
+	
+	#bottom_ridge {
+		width: 100%;
+		height: 10px;
+		position: absolute;
+		bottom: 0px;
+		
+//		@include linear-gradient(bottom, $background-color, $header-background)
+	}
 }
 
 #stage {
 	width: $stage-outer-width;
 	height: auto;
-	margin: 20px auto 0px auto;
+	margin: 0px auto;
 	background-color: transparent;
 	overflow: hidden;
 	z-index: -150;
@@ -61,12 +72,12 @@
 		width: $menu_width;
 		height: 100%;
 		float: left;
-		background: #2994FF;
+		background: #4A93D4;
 		
 		@include transition(background, 0.5s);
 		
 		&:hover {
-			background: #1A5FA3;
+			background: #053663;
 		}
 		
 		.text {
@@ -83,7 +94,7 @@
 		width: $line_width;
 		height: 100%;
 		float: left;
-		background: #1A5FA3;
+		background: #053663;
 	}
 	
 	a {

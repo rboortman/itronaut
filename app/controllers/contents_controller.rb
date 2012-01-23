@@ -12,17 +12,33 @@ class ContentsController < ApplicationController
       format.json { render json: @contents }
     end
   end
-
-=end
-
+  
+  
   # GET /contents/1
   # GET /contents/1.json
   def show
-    @content = Content.find(params[:id])
+    if params[:id]
+      @content = Content.find(params[:id])
+    elsif params[:name]
+      @content = Content.find_by_name(params[:name])
+    end
     
     @home = Content.find_by_name('home')
     @contact = Content.find_by_name('contact')
 
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @content }
+    end
+  end
+  
+=end
+  
+  def show
+    @content = Content.find_by_page(params[:page])
+    
+    @home = Content.find_by_name('home')
+    
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @content }

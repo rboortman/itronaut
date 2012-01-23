@@ -1,9 +1,10 @@
 @import 'configuration';
 @import 'css3/css3_effects';
 
-body.contact {
+body.show_down {
 	
 	.content {
+		
 		background: $border-color;
 		
 		.block {
@@ -11,7 +12,7 @@ body.contact {
 			
 			width: $stage-width - (2 * $padding);
 			height: auto;
-			min-height: 350px;
+			min-height: 150px;
 			margin: 10px 0px 50px 0px;
 			padding: 6px $padding;
 			float: left;
@@ -23,5 +24,14 @@ body.contact {
 			filter:alpha(opacity = 85);
 			overflow: hidden;
 		}
+		
+		.canvas {
+			border: 1px solid black;
+			
+		}
+		
+		
 	}
+	
+	
 }

@@ -1,12 +1,14 @@
 Itronaut::Application.routes.draw do
   
-  get '/about_us' => 'contents#show', :id => 3;
+  get '/show_down' => 'contents#show', :page => 4;
   
-  get '/contact' => 'contents#show', :id => 2;
+  get '/about_us' => 'contents#show', :page => 3;
   
-  root :to => 'contents#show', :id => 1;
+  get '/contact' => 'contents#show', :page => 2;
+  
+  root :to => 'contents#show', :page => 1;
  
-  get '/home' => 'contents#show', :id => 1;
+  get '/home' => 'contents#show', :page => 1;
   
   resources :contents
 

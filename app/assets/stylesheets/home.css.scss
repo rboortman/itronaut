@@ -53,7 +53,7 @@ body.home {
 		height: 200px;
 		padding: 10px 0px;
 		float: left;
-		background: #E3F0FF;
+		background: $border-color;
 		
 		
 		.offer {
@@ -73,26 +73,26 @@ body.home {
 		}
 		
 		.block1 {
-			background: #1F5AFF;
+			background: #4392D9;
 			
 			&:hover {
-				background: #153DAD;
+				background: #2F6799;
 			}
 		}
 		
 		.block2 {
-			background: #00217D;
+			background: #4670E3;
 			
 			&:hover {
-				background: #001242;
+				background: #3250A3;
 			}
 		}
 		
 		.block3 {
-			background: #008AD4;
+			background: #4C4CFF;
 			
 			&:hover {
-				background: #005A8A;
+				background: #3939BF;
 			}
 		}
 	}
@@ -100,17 +100,11 @@ body.home {
 	.promo_area {
 		padding: 0px 20px 20px;
 		float: left;
-		background: rgba(81, 145, 219, 0.3);
+		background: $text-background;
 		
 		.story {
 			width: 40%;
 			height: auto;
-			
-			.button {
-				&:hover {
-//					color: rgba(81, 145, 219, 1);
-				}
-			}
 		}
 	}
 }

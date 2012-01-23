@@ -3,6 +3,7 @@ class CreateContents < ActiveRecord::Migration
     create_table :contents do |t|
       t.string :name
       t.string :location
+      t.integer :page
 
       t.timestamps
     end

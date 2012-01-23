@@ -12,6 +12,7 @@
 
 	%body{ :class => if @content then @content.name.downcase! else controller.controller_name end }
 		#header_background
+			#bottom_ridge
 		#stage
 			.header
 				= render 'header' rescue nil

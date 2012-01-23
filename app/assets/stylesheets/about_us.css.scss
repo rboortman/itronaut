@@ -20,7 +20,7 @@ body.about_us {
 			
 			@include border-radius(5px);
 			
-			background: rgba(81, 145, 219, 0.3);
+			background: $text-background;
 			opacity: 0.85;
 			filter:alpha(opacity = 85);
 			overflow: hidden;

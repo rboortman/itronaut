@@ -10,12 +10,20 @@ Content.delete_all
 
 Content.create(
   :name => 'home',
-  :location => 'home/index')
+  :location => 'home/index',
+  :page => 1)
 
 Content.create(
   :name => 'contact',
-  :location => 'contact/index')
+  :location => 'contact/index',
+  :page => 2)
 
 Content.create(
   :name => 'about_us',
-  :location => 'about_us/index')
+  :location => 'about_us/index',
+  :page => 3)
+
+Content.create(
+  :name => 'show_down',
+  :location => 'show_down/index',
+  :page => 4)
