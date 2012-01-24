@@ -33,8 +33,9 @@ body.about_us {
 		
 		.arrow_container {
 			$arrow-padding: 10px;
-			$arrow-width: 28px;
-			$arrow-height: 85px;
+			$arrow-width: 30px;
+			$arrow-height: 80px;
+			$extra-square-margin: 20px;
 			$arrow-color: rgba(50, 50, 50, 0.2);
 			
 			width: $arrow-container-width - (2 * $arrow-padding);
@@ -45,9 +46,9 @@ body.about_us {
 			
 			.square {
 				width: $arrow-width;
-				height: $arrow-height;
+				height: $arrow-height - $extra-square-margin;
 				background: $arrow-color;
-				margin: (((4 * $arrow-width) - $arrow-height) / 2) 0px;
+				margin: (((4 * $arrow-width) - $arrow-height + $extra-square-margin) / 2) 0px;
 				float: left;
 			}
 			

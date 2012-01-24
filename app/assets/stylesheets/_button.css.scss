@@ -58,7 +58,10 @@ body {
 		background: rgba(50, 50, 50, 0.2);
 		float: left;
 		
-		@include transition(background, 0.2s, ease-out);
+		$button-radius: 10px;
+		@include transition(background, 0.15s, ease-out);
+		@include border-top-left-radius($button-radius);
+		@include border-bottom-right-radius($button-radius);
 		
 		.button_text {
 			padding: 6px 15px;

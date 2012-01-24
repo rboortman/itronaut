@@ -3,6 +3,7 @@
 
 #header_background {
 	width: 100%;
+	min-width: $stage-outer-width + 16px;
 	height: 130px;
 	position: absolute;
 	top: 0px;
@@ -14,7 +15,7 @@
 	
 	#bottom_ridge {
 		width: 100%;
-		height: 10px;
+		height: 100px;
 		position: absolute;
 		bottom: 0px;
 		
@@ -74,7 +75,7 @@
 		float: left;
 		background: #4A93D4;
 		
-		@include transition(background, 0.5s);
+		@include transition(background, 0.3s);
 		
 		&:hover {
 			background: #053663;
