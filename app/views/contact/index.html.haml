@@ -1,8 +1,36 @@
 %h1 How to contact us?
 
 .block.first.last
-	%p
-		%a{:href => 'mailto:ron@itronaut.com'}
+	#form
+		%h2 Quick questions
+		%form{:autocomplete => 'on'}
+			%input#name.form_input{:type => 'text', :placeholder => 'Your name', :autofocus => 'autofocus'}
+			%input#mail.form_input{:type => 'text', :placeholder => 'Your mail address'}
+			%input#phone.form_input{:type => 'text', :placeholder => 'Your phone number'}
+			%textarea#message.form_input{ :placeholder => 'Your message'}
 			.button
 				.button_text
-					Mail us!
+					Submit
+	
+	#right_area
+		%span#right
+			%h2 Stay in touch
+		#google_maps
+			%iframe{:src => 'http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=Brahmslaan+89,+Delft,+The+Netherlands&aq=0&oq=Br&sll=51.995703,4.33685&sspn=0.006976,0.01929&vpsrc=6&t=m&ie=UTF8&hq=&hnear=Brahmslaan+89,+Delft,+Zuid-Holland,+The+Netherlands&ll=52.118312,4.179611&spn=0.147568,0.344009&z=11&iwloc=A&output=embed'}
+		
+		#credentials
+			#left
+				%h3
+					%span#itronaut itronaut
+				Brahmslaan 89
+				%br
+				2625 BT, Delft
+				%br
+				the Netherlands
+			
+			#right
+				%span#contact Telephone:
+				+31 6 1022 3491
+				%br
+				%span#contact E-mail:
+				%a{:href => 'mailto:info@itronaut.com'}info@itronaut.com
